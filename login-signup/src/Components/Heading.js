@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FaArrowRightToBracket } from "react-icons/fa6";
+import { BsPersonPlus } from "react-icons/bs";
 
 export class Heading extends Component {
   render() {
@@ -11,6 +12,10 @@ export class Heading extends Component {
           <div className="login">
             <FaArrowRightToBracket />
             LogIn
+          </div>
+          <div className="register">
+            <BsPersonPlus />
+            Register
           </div>
         </div>
       </div>

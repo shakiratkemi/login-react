@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import Form from "./Form";
+import Heading from "./Heading";
 
 export class Signup extends Component {
   render() {
     return (
       <div>
+        <Heading />
         Signup
         <Form />
       </div>

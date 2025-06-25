@@ -6,8 +6,6 @@ export class Signup extends Component {
   render() {
     return (
       <div>
-        <Heading />
-        Signup
         <Form />
       </div>
     );

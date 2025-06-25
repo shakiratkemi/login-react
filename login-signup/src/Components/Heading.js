@@ -6,12 +6,14 @@ export class Heading extends Component {
   render() {
     return (
       <div>
-        <h1>Welcome to FUNAAB Portal</h1>
-        <p>Access your Admission application</p>
-        <div className="sign-up choice">
+        <div className="welcome">
+          <h2>Welcome to FUNAAB Portal</h2>
+          <p>Access your Admission application</p>
+        </div>
+        <div className="signup-choice">
           <div className="login">
             <FaArrowRightToBracket />
-            LogIn
+            Login
           </div>
           <div className="register">
             <BsPersonPlus />

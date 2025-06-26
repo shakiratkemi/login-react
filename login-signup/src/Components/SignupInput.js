@@ -1,38 +1,52 @@
 import React, { Component } from "react";
-import { FaArrowRightToBracket } from "react-icons/fa6";
+import Heading from "./Heading";
+import { BsPersonPlus } from "react-icons/bs";
 
-export class Form extends Component {
+export class SignupInput extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    };
+  }
   render() {
     return (
       <div className="form-container">
         <form action="#">
           <div className="name-container">
             <div className="input-box">
-              <label for="first">First name</label>
+              <label htmlFor="firstName">First name</label>
               <input type="text" placeholder="Enter first name" />
             </div>
             <div className="input-box">
-              <label for="first">Last name</label>
+              <label htmlFor="lastName">Last name</label>
               <input type="text" placeholder="Enter last name" />
             </div>
           </div>
 
           <div className="input-box">
-            <label for="first">Email</label>
+            <label htmlFor="email">Email</label>
             <input type="text" placeholder="Enter your email" />
           </div>
+
           <div className="input-box">
-            <label for="first">Password</label>
+            <label htmlFor="password">Password</label>
             <input type="password" />
           </div>
+
           <div className="input-box">
-            <label for="first">Confirm Password</label>
+            <label htmlFor="confirmPassword">Confirm Password</label>
             <input type="password" />
           </div>
 
           <button type="submit">
-             <FaArrowRightToBracket />
-             Create Account
+            <BsPersonPlus />
+            Create Account
           </button>
         </form>
       </div>
@@ -40,4 +54,4 @@ export class Form extends Component {
   }
 }
 
-export default Form;
+export default SignupInput;

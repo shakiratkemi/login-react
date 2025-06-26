@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import Heading from "./Heading";
-import Form from "./Form";
 import Policy from "./Policy";
+import SignupInput from "./SignupInput";
+import LoginInput from "./LoginInput";
 
 export class Content extends Component {
   render() {
     return (
       <div className="content-container">
         <Heading />
-        <Form />
+        <SignupInput />
+        <LoginInput />
         <Policy />
-
       </div>
     );
   }

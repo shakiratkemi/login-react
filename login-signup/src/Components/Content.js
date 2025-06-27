@@ -9,7 +9,7 @@ export class Content extends Component {
     return (
       <div className="content-container">
         <Heading />
-        <SignupInput />
+        {/* <SignupInput /> */}
         <LoginInput />
         <Policy />
       </div>

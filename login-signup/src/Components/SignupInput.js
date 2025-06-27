@@ -1,47 +1,77 @@
-import React, { Component } from "react";
-import Heading from "./Heading";
+import React from "react";
 import { BsPersonPlus } from "react-icons/bs";
+import FormHandler from "./FormHandler";
 
-export class SignupInput extends Component {
+class SignupInput extends FormHandler {
   constructor(props) {
-    super(props);
-
-    this.state = {
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-    };
+    super({
+      initialState: {
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      },
+    });
   }
+
   render() {
     return (
       <div className="form-container">
-        <form action="#">
+        <form action="#" onSubmit={this.handleSubmit}>
           <div className="name-container">
             <div className="input-box">
-              <label htmlFor="firstName">First name</label>
-              <input type="text" placeholder="Enter first name" />
+              <label>First name</label>
+              <input
+                type="text"
+                name="firstName"
+                placeholder="Enter first name"
+                value={this.state.firstName}
+                onChange={this.handleChange}
+              />
             </div>
+
             <div className="input-box">
-              <label htmlFor="lastName">Last name</label>
-              <input type="text" placeholder="Enter last name" />
+              <label>Last name</label>
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Enter last name"
+                value={this.state.lastName}
+                onChange={this.handleChange}
+              />
             </div>
           </div>
 
           <div className="input-box">
-            <label htmlFor="email">Email</label>
-            <input type="text" placeholder="Enter your email" />
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              value={this.state.email}
+              onChange={this.handleChange}
+            />
           </div>
 
           <div className="input-box">
-            <label htmlFor="password">Password</label>
-            <input type="password" />
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleChange}
+            />
           </div>
 
           <div className="input-box">
-            <label htmlFor="confirmPassword">Confirm Password</label>
-            <input type="password" />
+            <label>Confirm Password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              value={this.state.confirmPassword}
+              onChange={this.handleChange}
+            />
           </div>
 
           <button type="submit">
